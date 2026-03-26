@@ -46,7 +46,6 @@ The [getting started guide](getting-started.md) walks you through everything fro
 | File | What it does |
 |---|---|
 | [`claude-project-instructions.md`](templates/claude-project-instructions.md) | Project instructions with role assessment, CV tailoring, cover letter writing, and application tracking built in |
-| [`example-profile.md`](templates/example-profile.md) | Anonymised example of a completed profile |
 | [`applications-tracker.md`](templates/applications-tracker.md) | Application tracking file (Claude Code only) |
 | [`memory-setup.md`](templates/memory-setup.md) | Guide to how AI memory works for your job search |
 
@@ -54,6 +53,7 @@ The [getting started guide](getting-started.md) walks you through everything fro
 
 | File | What it does |
 |---|---|
+| [`example-profile.md`](examples/example-profile.md) | Anonymised example of a completed profile |
 | [`uk-job-boards.md`](examples/uk-job-boards.md) | UK job boards and company review sites |
 
 ## How it works
