@@ -1,6 +1,8 @@
 # Applications Tracker
 
-Track your job applications in one place. Claude will help maintain this file if your project instructions are set up. You can also update it manually.
+**Claude Code only.** Copy this file into your project folder as `applications.md`. Claude will update it automatically as you apply for roles and receive outcomes.
+
+**Browser/desktop users:** Claude can't write to files in your project. Instead, it stores your application history in memory and gives you a summary when you ask. You don't need this file.
 
 Update the status column as you progress through each application. Add new rows as you apply.
 

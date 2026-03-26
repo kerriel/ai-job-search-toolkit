@@ -10,26 +10,24 @@ The `examples/` folder contains regional guides for job boards and review sites.
 
 1. Create a file in `examples/` named `<country-code>-job-boards.md` (e.g. `us-job-boards.md`, `de-job-boards.md`, `au-job-boards.md`)
 2. Include:
-   - The main job boards in your region, with URLs, what each is best for, and any notes on recruiter vs direct employer balance
-   - Company review sites available in your region (Glassdoor, Kununu, Blind, etc.) with what to look for and known limitations
-   - Any industry or seniority-specific guidance
+  - The main job boards in your region, with URLs, what each is best for, and any notes on recruiter vs direct employer balance
+  - Company review sites available in your region (Glassdoor, Kununu, Blind, etc.) with what to look for and known limitations
+  - Any industry or seniority-specific guidance
 3. See `examples/uk-job-boards.md` for the format to follow
 
 ## Job board search prompts
 
-The `prompts/` folder contains search prompts for specific job boards. The UK examples (LinkedIn, Indeed UK, Totaljobs) show the pattern.
+The job search prompt generator (`prompts/02-job-search.md`) produces self-contained Chrome extension prompts with the user's profile baked in. It already supports LinkedIn, Indeed UK, and Totaljobs, and has an "Other" option for custom boards.
 
-**To add a prompt for a new job board:**
+**To improve job board support:**
 
-1. Start from `prompts/02-job-search-generic.md` as your template
-2. Customise the navigation section for your job board (how to get to listings, how to filter by date, how pagination works)
-3. Keep these unchanged:
-   - The screening order (posting date, working arrangement, industry, salary, seniority, role fit, employer vs recruiter)
-   - The summary output format
-   - The profile referencing pattern (reading from `my-profile.md`)
-   - The company review cross-referencing process
-   - The two-tier dealbreaker system (hard dealbreakers filter out, strong preferences flag as "worth a closer look")
-4. Name the file `02-job-search-<board-name>.md`
+- If a supported board (LinkedIn, Indeed UK, Totaljobs) has changed its UI or navigation, update the platform-specific instructions in the generator prompt
+- If you want to add first-class support for a new board, add its navigation details alongside the existing platforms in the generator prompt
+- Keep these unchanged:
+  - The screening order (posting date, working arrangement, industry, salary, seniority, role fit, employer vs recruiter)
+  - The summary output format
+  - The company review cross-referencing process
+  - The two-tier dealbreaker system (hard dealbreakers filter out, strong preferences flag as "worth a closer look")
 
 ## General contributions
 

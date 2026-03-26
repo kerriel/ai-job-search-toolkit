@@ -1,3 +1,11 @@
+# Example Profile
+
+This is an anonymised example of a completed profile. Your profile will be generated through a guided conversation when you run the [profile builder prompt](../prompts/01-profile-builder.md). You don't need to fill this in manually.
+
+**Keep it fresh.** Your profile will change over time. If your preferences, dealbreakers, salary expectations, or circumstances shift, tell Claude and ask it to update your profile. A stale profile means stale recommendations.
+
+---
+
 # My Profile
 
 ## About me

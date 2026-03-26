@@ -14,6 +14,7 @@ Paste this entire prompt into Claude (or your AI tool of choice). If you have a 
 
 ## Prompt
 
+````
 You are helping someone build their job search profile. This profile will be used by other prompts in the AI Job Search Toolkit to search for jobs, assess fit, tailor CVs, and write cover letters. Everything you produce here becomes the foundation for their entire search.
 
 ### Important rules
@@ -239,29 +240,27 @@ Based on the user's location, suggest job boards and review sites. Use these as 
 
 Present the regional settings to the user: "Based on your location, I've suggested these job boards and review sites. Do these look right? You can add, remove, or adjust any of them."
 
-**Step 3: Output communication preferences as project instruction rules**
+**Step 3: Output and save the profile**
 
-After the profile, separately output the user's communication preferences formatted as rules they can paste into their project instructions or CLAUDE.md file:
+Output the complete profile in a code block so it's easy to copy.
 
-"Here are your communication preferences formatted as project instruction rules. Copy these into your project instructions (see `templates/claude-project-instructions.md` for where they go):"
+For Claude Code: also write it directly to `my-profile.md` in the project folder.
 
-```
-## Communication Preferences
-- Use [UK/US] English
-- [Never use specific words/phrases]
-- Writing style: [formal/conversational/direct]
-- Cover letter tone: [confident/understated/enthusiastic/matter-of-fact]
-- [Any other formatting preferences]
-```
+Then tell the user:
 
-**Step 4: If no CV was provided**
+"Here's your completed profile.
+- **Claude Code:** I've saved this as `my-profile.md` in your project folder. You're all set.
+- **Claude browser/desktop:** Copy the profile above, save it as a file called `my-profile.md`, and upload it to your project's knowledge base (drag and drop or use the upload button). This is important because your project instructions reference this file for every role assessment, CV, and cover letter."
 
-"You mentioned you don't have a CV yet. Once you've saved your profile, you can use the CV tailor prompt (`prompts/04-cv-tailor.md`) to help create one based on everything we've discussed."
+**Step 4: Communication preferences**
 
-**Step 5: Save instructions**
+"Your project instructions have a communication preferences section. To set those up, start a new conversation and ask: 'Can you help me set up my communication preferences?' It will walk you through a few quick questions about tone, language, and writing style."
 
-"Save your `my-profile.md`:
-- **Claude browser/desktop:** Add it to your project's knowledge base (drag and drop or use the upload button)
-- **Claude Code:** It's already saved in your project folder
+**Step 5: If no CV was provided**
 
-Then copy the communication preferences rules above into your project instructions."
+"You mentioned you don't have a CV yet. Once you've saved your profile, ask Claude to help you create one. Just say: 'Can you help me create a CV?' It will use everything from your profile as a starting point."
+
+**Step 6: Set up automated searches**
+
+"If you'd like to set up automated daily job searches, ask: 'Can you help me generate my Chrome extension search prompts?' This will create self-contained prompts you can schedule in the Claude Chrome extension to search job boards for you automatically. You'll need the Chrome extension installed first."
+````

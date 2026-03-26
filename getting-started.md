@@ -24,7 +24,7 @@ Before you start sharing personal information, it's worth knowing how your data 
 
 ## Choose your path
 
-There are two ways to set up the toolkit. **Path A is recommended for most people**, especially if you're new to AI tools.
+There are two ways to set up the toolkit. **Path A is recommended for most people**, especially if you're new to AI tools. **Path B is for developers and technical users** who are comfortable with the command line and want to use Claude Code or another command-line AI agent.
 
 ---
 
@@ -52,7 +52,7 @@ Project instructions are rules that tell Claude how to behave in every conversat
 2. Find the project settings or custom instructions area
 3. Copy the template from [`templates/claude-project-instructions.md`](templates/claude-project-instructions.md) in this repo
 4. Paste it into the custom instructions field
-5. After running the profile builder (step 6), you'll come back and add your communication preferences here
+5. Once your profile is built, ask Claude: **"Can you help me set up my communication preferences?"** It will walk you through a few quick questions about tone, language, and writing style
 
 **Important:** Project instructions are different from your knowledge base files. Instructions are rules that govern behaviour. Knowledge base files are reference materials Claude reads when it needs facts.
 
@@ -85,19 +85,19 @@ Your project now has three layers working together:
 
 Instructions are the boss. Files are the reference library. Memory is the notebook. Instructions explicitly reference the other two.
 
-### 6. Run the profile builder
+### 6. Build your profile
 
 This is where you build your job search profile through a guided conversation.
 
 1. Start a **new conversation** within your project
-2. Paste the entire profile builder prompt from [`prompts/01-profile-builder.md`](prompts/01-profile-builder.md)
-3. If you have a CV, upload it at the same time (drag and drop works)
-4. Answer the questions one at a time. The conversation takes 10-15 minutes
-5. At the end, Claude generates your `my-profile.md`
-6. **Save it to your project knowledge base** (download the file, then upload it to your project's files)
-7. **Copy the communication preferences** that Claude outputs separately, and paste them into your project instructions (replacing the placeholder section)
+2. Say: **"Can you help me build my job search profile?"** If you have a CV, upload it at the same time (drag and drop works) and add: "Here's my CV to use as a starting point."
+3. Claude will walk you through a series of questions about your experience, what you're looking for, your dealbreakers, preferences, and communication style. Answer them one at a time. It takes about 10-15 minutes.
+4. At the end, Claude generates your `my-profile.md`
+5. **Save it to your project knowledge base** (download the file, then upload it to your project's files)
 
-You're now set up. Every prompt in this toolkit will reference your profile automatically.
+You're now set up. Every conversation in your project will reference your profile automatically. If Claude notices your profile is missing, it will offer to help you create it.
+
+**Next step:** If you want automated daily job searches, continue to [Set up the Chrome extension](#set-up-the-chrome-extension-for-automated-daily-searches) below.
 
 ---
 
@@ -146,7 +146,7 @@ cp path/to/claude-project-instructions.md ~/job-search/CLAUDE.md
 
 Claude Code reads `CLAUDE.md` automatically as project instructions.
 
-### 5. Run the profile builder
+### 5. Build your profile
 
 Start Claude Code in your project folder:
 
@@ -155,9 +155,11 @@ cd ~/job-search
 claude
 ```
 
-Paste the profile builder prompt from [`prompts/01-profile-builder.md`](prompts/01-profile-builder.md). Claude reads your CV from the folder automatically. Answer the questions, and it generates `my-profile.md` in your project folder.
+Say: **"Can you help me build my job search profile?"** Claude reads your CV from the folder automatically. Answer the questions one at a time, and it generates `my-profile.md` in your project folder.
 
-After the profile is generated, copy the communication preferences output into your `CLAUDE.md` file.
+If you skip this step, Claude will notice the profile is missing next time you start a conversation and offer to help you create it.
+
+**Next step:** If you want automated daily job searches, continue to [Set up the Chrome extension](#set-up-the-chrome-extension-for-automated-daily-searches) below.
 
 ---
 
@@ -175,49 +177,57 @@ Install the Claude Chrome extension from the Chrome Web Store.
 
 Click the **jigsaw puzzle icon** (Extensions) in the Chrome toolbar. Find the Claude extension in the list and click the **pin icon** next to it. This keeps it visible and easy to access. You can also right-click the extension icon and select "Pin" from the menu.
 
-### 3. Log into your job boards
+### 3. Set site permissions (recommended)
+
+By default, the Chrome extension can run on any website. It's worth restricting it to only the sites it needs.
+
+1. Go to your settings in Claude.ai or Claude Desktop
+2. Navigate to **Claude Chrome** in the settings menu
+3. Under **Default for all sites**, choose **Block extension**
+4. Add the specific websites you want the extension to work on (your job boards and company review sites, e.g. linkedin.com, uk.indeed.com, totaljobs.com, glassdoor.co.uk)
+
+This isn't required, but it's good practice to limit the extension to the sites you're actually using it on.
+
+### 4. Log into your job boards
 
 Before setting up automated searches, log into your job boards (LinkedIn, Indeed, Totaljobs, etc.) and company review sites (Glassdoor, etc.) in Chrome. The extension needs access to these sites when it runs.
 
-### 4. Create a scheduled search
+### 5. Generate and schedule your search prompts
 
-1. Open the Chrome extension by clicking its icon in the toolbar
-2. Type `/` in the chat box at the bottom
-3. Select **"Schedule a task"**
-4. In the **"Create shortcut"** box, fill in:
-   - **Name:** A clear name for the search (e.g. "LinkedIn Job Search", "Indeed UK Search")
-   - **Prompt:** Paste the search prompt from this repo (e.g. the contents of `prompts/02-job-search-linkedin.md`)
-   - **URL:** The starting page for the job board (e.g. linkedin.com/notifications for LinkedIn, uk.indeed.com for Indeed UK)
-   - **Schedule:** Toggle on. Select frequency (Daily is recommended for active searching). Set your preferred time (mornings work well, before you start your day)
-   - **Model:** Use the most capable model available. At time of writing, Sonnet 4.6 or newer works well for the search and review workflow
-5. Hit **"Create shortcut"** to save
+The Chrome extension can't access your project files, so your search prompts need your profile information baked in. The job search prompt generator handles this for you.
 
-### 5. Use it
+1. Open `prompts/02-job-search.md` and copy the prompt into your Claude project (browser/desktop) or Claude Code session
+2. It will ask which job board you're searching and generate a self-contained Chrome extension prompt
+3. Follow the setup instructions at the bottom of `prompts/02-job-search.md` to create a scheduled shortcut in the Chrome extension
+
+### 6. Use it
 
 Your prompt is now available by typing `/` followed by the name you gave it, then pressing return.
 
-### 6. Automated runs
+### 7. Automated runs
 
 Because you enabled the schedule, the prompt runs automatically at the time you set, as long as Chrome is open. You'll see the results next time you open the extension.
 
-### 7. Repeat for each job board
+### 8. Repeat for each job board
 
 Set up a separate scheduled search for each job board you want to monitor. Each one runs independently.
+
+### Important: keep Chrome open
+
+Scheduled searches only run while Chrome is open. If you close your browser or shut down your computer overnight, any searches scheduled during that time won't run. Either leave Chrome open, or schedule your searches for a time when your computer will be on and Chrome will be running.
 
 ---
 
 ## Daily workflow
 
-Once everything is set up, here's your daily routine:
+Once everything's set up, here's the recommended daily routine:
 
-1. **First pass (automated):** Your search prompts run automatically each morning (or whenever you scheduled them)
+1. **Check your results.** Your search prompts run automatically each morning (or whenever you scheduled them). The output will be open on your desktop showing every role that was checked and why it was included or filtered out.
 
-2. **Review the output:** Open the Chrome extension and read the results. The decisions log shows every role that was checked and why it was included or filtered out
+2. **Copy the output into your project.** Scroll to the bottom of the output and click the small copy icon. Paste it into your Claude project (browser/desktop) or Claude Code session. Your project has your full profile, CV, memory, and application history, so it has much richer context than the Chrome extension.
 
-3. **Second pass (you + your project):** Copy the suitable roles summary into your Claude project (browser/desktop) or Claude Code session. Your project has your full profile, CV, memory, and application history, giving it much richer context than the Chrome extension
+3. **Review the recommendations.** Claude assesses the output against everything it knows about you and recommends roles worth applying for. Each recommendation includes a link to the job listing. If a link is missing, just ask for it. It's worth reading through all the results, not just the top picks.
 
-4. **Confirm suitability:** Ask Claude to review each role against your full profile. **Read the full job listing yourself** for any role you're considering. Don't apply based on the summary alone
+4. **Choose and apply.** Pick the roles you want to pursue. If you'd like, Claude will offer to help tailor your CV and draft a cover letter. Review the output as if you were the hiring manager before submitting.
 
-5. **Assess fit:** For confirmed roles, use the application assessor (`prompts/03-application-assessor.md`) for a detailed fit assessment
-
-6. **Apply:** For roles you want to pursue, use the CV tailor (`prompts/04-cv-tailor.md`) and cover letter writer (`prompts/05-cover-letter-writer.md`). Review the output as if you were the hiring manager before submitting
+5. **Track your applications.** Let Claude know when you've applied for something. It will keep track of where you've applied, the status of each application, and help you follow up on anything that's gone quiet.

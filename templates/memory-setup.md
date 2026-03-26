@@ -1,5 +1,7 @@
 # Memory Setup Guide
 
+**This guide is for Claude.ai and Claude Desktop users.** Claude Code has a different, file-based memory system. When you tell Claude Code something has changed (e.g. "I've changed my mind about remote work"), you can ask it to update your `CLAUDE.md` or profile file directly. It writes to files in your project folder, so there's no separate memory setup needed.
+
 ## What is memory?
 
 When you use Claude within a project, it remembers things across conversations. You don't need to repeat yourself every time you start a new chat. The more you use your job search project, the better Claude understands your situation.
