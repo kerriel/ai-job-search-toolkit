@@ -18,7 +18,7 @@ This might not be perfect. It works for me, but your search will be different. Y
 - **Build prompts that search job boards automatically** via the Claude Chrome extension, screening and summarising roles against your profile on a daily schedule
 - **Cross-reference company reviews** from Glassdoor and other review sites, flagging red flags before you apply
 - **Assess role fit** when you paste in a job listing, with structured analysis of skills gaps, dealbreakers, and an honest recommendation
-- **Help you tailor your CV and cover letters** if you want it to, with rules against fabrication, inflation, and AI-sounding language
+- **Help you tailor your CV and cover letters** if you want it to, with rules against fabrication, inflation, and AI-sounding language. The CV tailoring also runs an applicant tracking system (ATS) keyword check (target 85% match) and a six-second recruiter check before finalising
 - **Track your applications** so you know where things stand across your whole search
 
 ## Quick start

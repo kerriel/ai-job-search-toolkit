@@ -137,10 +137,54 @@ When tailoring my CV for a role:
 - **Never fabricate experience or skills.** If I haven't done it, don't say I have. Not even with softer language. Not even if it would make the CV stronger.
 - **Never inflate scope, ownership, or impact.** If I managed one person, don't frame it as "led a team." If I contributed to a project, don't frame it as "drove the initiative." If results were a team effort, don't imply they were mine alone.
 - **Don't parrot the job listing's language.** Reframe my experience in my own voice, not in the employer's words mirrored back at them. Hiring managers notice when a CV reads like their own job ad repeated back.
+- **Keywords vs parroting.** There's an important distinction. Include the specific keywords from the listing (skills, tools, methods, qualifications) wherever I genuinely have that experience, because applicant tracking systems scan for them. Don't copy full phrases or sentences from the listing. Drop the keyword into my own description of what I did.
 - **Adapt emphasis and framing, not facts.** Reorder sections, adjust which achievements are highlighted, reword descriptions. Don't change what happened.
 - **Preserve my CV structure** unless I specifically ask for a restructure. Move things around within sections, but keep the sections themselves.
 
-After producing the tailored CV, list what was changed and why. Then ask: "Read this as if you're the person hiring. Does it sound like you? Would you be comfortable saying all of this in an interview? If anything feels like a stretch or doesn't sound like your voice, tell me what to change."
+After producing the tailored CV, run the checks below in order. Show me the result of each one before moving to the next. Iterate on the CV between checks if needed.
+
+**Check 1: List what changed**
+
+Briefly list what was changed and why. Sections moved, bullets reframed, content emphasised or reduced.
+
+**Check 2: Applicant tracking system (ATS) review**
+
+Many companies pass CVs through an automated keyword scanner before a human ever sees them. The scanner looks for specific terms from the job listing in my CV. I want to make sure mine would pass.
+
+1. Extract the key terms from the job listing. Focus on:
+   - Hard skills (specific tools, technologies, methodologies, qualifications)
+   - Soft skills explicitly named in the listing (e.g. "stakeholder management", "cross-functional")
+   - Industry-specific terminology
+   - Seniority indicators (e.g. "head of", "senior", "manager")
+   - Certifications or qualifications
+2. For each term, check whether it appears in the tailored CV. Categorise as:
+   - **Present** (term appears verbatim or as a close variant)
+   - **Missing but I have the experience** (the experience is in the CV, just worded differently)
+   - **Missing because I don't have it** (skip these, don't fake them)
+3. Calculate the keyword match score: present terms divided by (present + missing-but-I-have-the-experience), expressed as a percentage. Exclude "missing because I don't have it" from the calculation.
+4. Show me the score and the breakdown.
+
+**Target: 85% or above.**
+
+If the score is below 85%, identify which "missing but I have the experience" terms could be naturally worked into my CV. Suggest the specific edit (which bullet, what change). Make sure each change still reflects what I actually did, and isn't just dropping the keyword in for the sake of it. After making the edits, recalculate the score. Repeat until I'm at 85% or above or until further edits would feel forced or dishonest.
+
+**Check 3: Six-second recruiter check**
+
+Recruiters often spend around six seconds skimming a CV before deciding whether to read it properly. I want to know what they'd take from those six seconds.
+
+Imagine you're a recruiter looking at this CV for this specific role for the first time. In six seconds, what would you notice? Tell me:
+
+- What's the very first thing the eye lands on (name, headline, top of the experience section)?
+- What three things would stand out in a quick top-to-bottom skim?
+- Does the most relevant experience for this role appear in the top third of the CV, or do you have to scroll down to find it?
+- Are dates, job titles, and company names easy to read at a glance?
+- If you only read the top third, would you put this CV forward for the role?
+
+If the answer to the last question is no, suggest specific changes (move this section up, lead with this achievement, rewrite this headline) to make the answer yes. Show me the changes, then re-run the six-second check.
+
+**Check 4: Final sanity check**
+
+Once the CV passes both the ATS check and the six-second check, ask: "Read this as if you're the person hiring. Does it sound like you? Would you be comfortable saying all of this in an interview? If anything feels like a stretch or doesn't sound like your voice, tell me what to change."
 
 ### Cover letter writing
 
