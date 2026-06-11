@@ -65,6 +65,30 @@ The [getting started guide](getting-started.md) walks you through everything fro
 5. **Review your results.** Each morning, check the search summaries. When you find a role you're interested in, paste the listing into your project and Claude will assess it against your profile.
 6. **Apply.** If you decide to go for it, Claude offers to tailor your CV, then draft a cover letter, then log the application. You choose which steps you want help with.
 
+## Decisions and tradeoffs
+
+None of these felt like hard decisions at the time. They're the kind of decisions I make as a person, but they're worth explaining because they shaped how the toolkit works.
+
+- **Two tiers of dealbreakers, because near-misses can still get you hired.** Hard dealbreakers filter roles out automatically. Strong preferences don't: a role that misses one gets flagged as "worth a closer look" instead of vanishing. Some roles don't map directly to your requirements but could still be interesting, and I didn't want the system quietly excluding them before I'd seen them.
+
+- **Recruiter postings are flagged, never filtered.** I'd been ghosted by several recruiters during my own search, so I wanted to know who was behind a listing. But the flag is information, not a judgement: good recruiters know the hiring manager and can advocate for you internally, and I didn't want my frustration encoded into the screening.
+
+- **The no-fabrication rules are hard rules, because they're mine.** I'm massively uncomfortable with not telling the truth, sometimes to my own detriment, and I hate it when things get made up. So the CV tailor and cover letter writer are built to never invent, never inflate scope, and never parrot the listing's language back. I'll be honest, though: rules like these make the AI try as hard as possible, but they can't guarantee it. You still have to read the output yourself and check it hasn't decided to make up something it thinks you said. If a hiring manager met you in person, they should recognise the person from the application.
+
+- **Prompts and markdown, not an app.** Onboarding with AI can be a bit intimidating, and I just wanted to help people, wherever they already felt comfortable: Claude in the browser, the desktop app, or Claude Code. Plain markdown works everywhere and anyone can edit it.
+
+- **Personality assessments are bring-your-own.** My own results do genuinely help with judgement calls sometimes, so they're supported. But I don't own the copyright to any of those frameworks, so the toolkit never administers a test. If you've got results, they add another helpful layer; if you haven't, nothing stops you using everything else.
+
+## What I learned
+
+- **The biggest win wasn't the time saved, it was the reduction in stress and anxiety.** Job searching is a long process: finding the roles, putting together the right CV and cover letter for each one, going through the application, tracking where everything stands. The hardest part is spending half a day on an application and not even getting a response, so reducing the cost of each application matters as much as the quality. Making all of that quick and easy reduced the anxiety of the whole thing, not just the hours. I use this every day, seven days a week.
+
+- **It covers far more ground than I could manually.** Eight or nine job boards get searched every morning before 9:00. By the time I come down with my coffee, I can take the outputs, run them through Claude Code, and make quick decisions about what I want to do with them.
+
+- **The system improves because we review it.** We do retros on how the search is going and tweak anything that could work better. The job market is really tough right now, especially at the level I'm looking at, so anything that makes it easier is a positive thing.
+
+I just hope that anyone who picks this up experiences a little bit of positivity in what can be a soul-sucking process.
+
 ## Built for Claude
 
 This was built for Claude and tested with Claude.ai, Claude Desktop, the Chrome extension, and Claude Code. The prompts could probably be adapted for other AI tools that support web browsing and file uploads, though some features (projects, memory, scheduled tasks) are Claude-specific.
