@@ -1,21 +1,39 @@
 # Profile Builder
 
-Build your job search profile through a guided conversation. This generates a `my-profile.md` file that all the other prompts in this toolkit reference.
+Build your job search profile by answering questions, one at a time, which takes about 10–15 minutes. At the end you get a file called `my-profile.md`, which the other prompts in this toolkit read, and Claude tells you where to save it.
 
 ## How to use
 
-Paste this entire prompt into Claude (or your AI tool of choice). If you have a CV, upload it at the same time. If you don't have a CV yet, that's fine. The prompt will work without one and can help you create one afterwards.
+**If you set up a Claude project with this toolkit:**
 
-## Inputs
+1. Start a new conversation in your project.
+2. Ask: **"Can you help me build my job search profile?"**
+3. If you have a CV, add it to the same message.
 
-- **Your CV** (optional): upload it, drag it in, or paste the text. If you don't have one, just say so.
+**If you didn't:**
+
+1. Hover over the grey box under Prompt below.
+2. Click the copy icon in its top-right corner.
+3. Paste it into a new conversation in Claude or another AI assistant.
+4. If you have a CV, add it to the same message.
+
+No CV yet? It still works, and at the end Claude offers to help you write one.
+
+## What you need
+
+Your CV, if you have one. Drag the file into the message box or paste its text into your message. No CV? Say so, and Claude will ask you everything instead.
+
+> [!NOTE]
+> You can skip any question, including the one about salary. Say "skip" and Claude moves on.
+
+*These frameworks are trademarked by their respective owners. This toolkit is not affiliated with or endorsed by any of them.*
 
 ---
 
 ## Prompt
 
 ````
-You are helping someone build their job search profile. This profile will be used by other prompts in the AI Job Search Toolkit to search for jobs, assess fit, tailor CVs, and write cover letters. Everything you produce here becomes the foundation for their entire search.
+You are helping someone build their job search profile. This profile will be used by other prompts in the AI Job Search Toolkit to search for jobs, assess fit, tailor CVs, write cover letters and prepare for interviews. Everything you produce here becomes the foundation for their entire search.
 
 ### Important rules
 
@@ -25,6 +43,7 @@ You are helping someone build their job search profile. This profile will be use
 - If no CV was provided, note this and ask all questions from scratch.
 - Keep your language clear and straightforward. Assume the user may never have used an AI tool before.
 - Never guess or make up information. If something is unclear, ask.
+- The user can skip any question, including salary. If they do, note it in the profile as "Not provided" and move on without comment.
 
 ### Stage 1: Core identity
 
@@ -36,10 +55,10 @@ Ask these questions one at a time:
 
 3. "Which best describes your career stage?"
    - New graduate (just finished or about to finish education)
-   - Early career (0-3 years of experience)
-   - Mid-career (3-10 years)
+   - Early career (0–3 years of experience)
+   - Mid-career (3–10 years)
    - Senior (10+ years)
-   - Executive (C-suite or VP level)
+   - Executive (director, vice president or C-suite level)
 
 Note the career stage. It determines how you ask questions in every stage that follows.
 
@@ -67,7 +86,7 @@ Adapt your questions based on the career stage from Stage 1.
 
 1. "What's your leadership experience? Teams you've built, departments you've run, organisations you've shaped."
 
-2. "What's your track record of measurable impact? Think about the numbers: revenue, efficiency, growth, cost reduction."
+2. "What measurable results have you achieved? Think about the numbers: revenue, efficiency, growth, cost reduction."
 
 3. "What domains do you specialise in?"
 
@@ -77,7 +96,7 @@ Adapt your questions based on the career stage from Stage 1.
 
 1. "What kind of work interests you? Don't worry about specific job titles yet. Think about what you'd enjoy doing day to day."
 
-After their answer, suggest 3-5 relevant job titles based on what they've described. Ask: "Do any of these sound right? Feel free to adjust or add your own."
+After their answer, suggest 3–5 relevant job titles based on what they've described. Ask: "Do any of these sound right? Feel free to adjust or add your own."
 
 **If early career, mid-career, senior, or executive:**
 
@@ -107,7 +126,8 @@ Explain the two-tier system first:
 
 Here are some common ones to think about:
 - Commute length or location
-- Minimum salary (if you have one in mind, I can share typical ranges for your target roles in your region as a reference point)
+- Minimum salary (if you're not sure, I can help you find published salary data for your target roles, and I'll tell you where each figure comes from)
+- How recent a job posting needs to be (for example, only roles posted in the last 7 days)
 - Industries you definitely don't want to work in
 - Must-haves like a training programme, mentorship, or flexible hours
 
@@ -130,9 +150,11 @@ Then ask one at a time:
 
 4. "Industries or sectors to exclude?"
 
-5. "Any other non-negotiables?"
+5. "How recent does a job posting need to be for you to want to see it? For example, only roles posted in the last 7 days. The search tools use this to skip old listings."
 
-6. "Now, what are your strong preferences? Important to you, but you might flex on them if everything else is right."
+6. "Any other non-negotiables?"
+
+7. "Now, what are your strong preferences? Important to you, but you might flex on them if everything else is right."
 
 ### Stage 5: Personality and working style (optional)
 
@@ -149,8 +171,6 @@ If you've taken any of these assessments, you can share your results. If not, sk
 Skip this? Just say 'skip' and we'll move on."
 
 If the user shares results, note them. If they skip, move on without comment.
-
-*These frameworks are trademarked by their respective owners. This toolkit is not affiliated with or endorsed by any of them.*
 
 ### Stage 6: Communication preferences
 
@@ -172,6 +192,10 @@ Ask one at a time:
    - Enthusiastic
    - Matter-of-fact"
 
+5. "Any formatting preferences? For example: prefer bullet points over paragraphs, keep things short."
+
+6. "Anything else about how I write that matters to you?"
+
 ### Output generation
 
 After all stages are complete, generate the profile.
@@ -190,11 +214,11 @@ Use this exact structure:
 ### Domain knowledge
 [Industries, workflows, and systems understood deeply]
 
-### Key skills
+### Main skills
 [Core competencies and capabilities]
 
 ### Track record
-[Measurable achievements and impact, if applicable]
+[Measurable achievements and results, if applicable]
 
 ## What I'm looking for
 ### Target roles
@@ -216,7 +240,7 @@ Use this exact structure:
 [Important but not absolute, flagged as "worth a closer look" if missed]
 
 ## Personality and working style
-[Assessment results if provided, or "Not provided" if skipped]
+[Assessment results and coaching notes if provided, or "Not provided" if skipped]
 
 ## Communication preferences
 [Writing style, tone, banned words, formatting, language variant]
@@ -234,7 +258,7 @@ Use this exact structure:
 Based on the user's location, suggest job boards and review sites. Use these as starting points:
 
 - **UK:** LinkedIn, Indeed UK (uk.indeed.com), Totaljobs, Reed, Guardian Jobs. Review sites: Glassdoor UK (glassdoor.co.uk)
-- **US:** LinkedIn, Indeed, Glassdoor US, Blind. Review sites: Glassdoor (glassdoor.com), Blind
+- **US:** LinkedIn, Indeed, Glassdoor US. Review sites: Glassdoor (glassdoor.com), Blind
 - **Germany:** LinkedIn, StepStone, Xing. Review sites: Kununu
 - **Australia:** LinkedIn, Seek, Indeed AU. Review sites: Glassdoor AU
 
@@ -249,18 +273,16 @@ For Claude Code: also write it directly to `my-profile.md` in the project folder
 Then tell the user:
 
 "Here's your completed profile.
-- **Claude Code:** I've saved this as `my-profile.md` in your project folder. You're all set.
-- **Claude browser/desktop:** Copy the profile above, save it as a file called `my-profile.md`, and upload it to your project's knowledge base (drag and drop or use the upload button). This is important because your project instructions reference this file for every role assessment, CV, and cover letter."
+- **Claude Code:** I've saved this as `my-profile.md` in your project folder.
+- **Claude app:** Copy the profile above and save it as `my-profile.md` in your Documents folder (step 6 of the Claude app setup guide shows how on a Mac and on Windows), then add it to your project knowledge with the **+** button. **Another AI assistant:** save it the same way, as a plain-text file called `my-profile.md` in your Documents folder, then add it to your project's files."
 
-**Step 4: Communication preferences**
+**Step 4: If no CV was provided**
 
-"Your project instructions have a communication preferences section. To set those up, start a new conversation and ask: 'Can you help me set up my communication preferences?' It will walk you through a few quick questions about tone, language, and writing style."
+"You mentioned you don't have a CV yet. Once you've saved your profile, ask me to help you create one. Just say: 'Can you help me create a CV?' I'll use everything from your profile as a starting point."
 
-**Step 5: If no CV was provided**
+**Step 5: Point them to Part 2, daily searches**
 
-"You mentioned you don't have a CV yet. Once you've saved your profile, ask Claude to help you create one. Just say: 'Can you help me create a CV?' It will use everything from your profile as a starting point."
-
-**Step 6: Set up automated searches**
-
-"If you'd like to set up automated daily job searches, ask: 'Can you help me generate my Chrome extension search prompts?' This will create self-contained prompts you can schedule in the Claude Chrome extension to search job boards for you automatically. You'll need the Chrome extension installed first."
+"Your profile is Part 1 of setup. Part 2 is your daily searches, which is where you make a search prompt for each job board you use.
+- **Claude app or Claude Code:** open the daily searches guide in the toolkit (daily-searches.md) and follow its steps. It recommends Cowork, part of the Claude desktop app, and uses the Chrome extension for any job board Cowork can't search.
+- **Another AI assistant:** follow the Your daily searches section of the setup page you used (setup-any-ai-assistant.md)."
 ````
