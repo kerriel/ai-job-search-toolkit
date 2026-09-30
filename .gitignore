@@ -1,3 +1,19 @@
 .DS_Store
 *.swp
 *~
+
+# Personal job search files: keep them out of the toolkit and any fork of it
+my-profile.md
+applications.md
+*.pdf
+*.docx
+*.doc
+*.odt
+*.pages
+*.rtf
+my-cv.*
+/CLAUDE.md
+.claude/
+job-search/
+search-prompts/
+results/
